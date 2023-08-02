@@ -47,7 +47,10 @@ body {
   z-index: 100;
   width: 2em;
   right: 0;
-  display: f;
+}
+
+#header> .control{
+  flex-direction: column;
 }
 
 #header>h1 {
