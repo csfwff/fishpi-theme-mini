@@ -1,6 +1,6 @@
 :root {
   --global-text-color: #cecac3;
-  --global-background-color: rgb(35, 36, 37, .2);
+  --global-background-color: rgb(35, 36, 37,0.8);
   --main-chatroom-message-color: var(--global-text-color);
   --main-chatroom-user-message-color: var(--global-text-color);
   --global-control-text-color: var(--global-text-color);
@@ -37,7 +37,7 @@ body {
 #main,
 #content,
 #content .layout{
-  background: transparent;
+  background: var(--global-background-color);
 }
 
 #header {
@@ -47,6 +47,7 @@ body {
   z-index: 100;
   width: 2em;
   right: 0;
+  display: f;
 }
 
 #header>h1 {
@@ -56,13 +57,15 @@ body {
 #home-sidebar.sidebar {
   width: 2em;
   justify-content: flex-end;
-    z-index: 100;
+  z-index: 100;
+  background: var(--global-background-color);
 }
 
 #home-sidebar .ivu-avatar {
   height: 20px;
   width: 20px;
   line-height: 20px;
+  min-width: 20px;
 }
 
 #home-sidebar.sidebar .feature-list {
@@ -73,8 +76,8 @@ body {
 
 #home-sidebar.sidebar .feature-list .feature-item {
   padding: 0;
-  padding-bottom: 0;
-  padding-top: 1em;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5em;
 }
 
 #home-sidebar.sidebar .feature-list .feature-item i {
@@ -103,13 +106,13 @@ body {
   margin-right: 2em;
 }
 
-.win-opacity-btn {
+/* .win-opacity-btn {
   display: none;
 }
 
 .win-top-btn {
   display: none;
-}
+} */
 
 .music-module {
   display: none;
@@ -142,9 +145,10 @@ body {
 #content .msg-item .db-users .redpacket-avatar,
 #content .msg-item .redpacket-users .db-avatar,
 #content .msg-item .redpacket-users .redpacket-avatar {
-  width: 10px;
+  width: 15px;
   height: 15px;
   line-height: 15px;
+  min-width: 15px;
 }
 
 #content .msg-item .db-users,
@@ -156,6 +160,7 @@ body {
   width: 20px;
   height: 20px;
   line-height: 20px;
+  min-width: 20px;
 }
 
 #content .msg-item.msg-current .msg-contain,
@@ -198,7 +203,7 @@ body {
 
 .layout .discusse {
   position: absolute;
-  bottom: 50px;
+  bottom: 60px;
   width: 100%;
   z-index: 100;
 }
@@ -219,5 +224,9 @@ body {
 .ivu-modal-footer {
     border-top-color: #10100f;
 	background-color: gainsboro;
+}
+
+.ivu-avatar{
+  min-width: 15px;
 }
 
